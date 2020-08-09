@@ -1,58 +1,51 @@
-.App {
-  text-align: center;
-}
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/templates/simple-sidebar)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
 
-.App-logo {
-  height: 40vmin;
-}
+ #wrapper {
+    overflow-x: hidden;
+ }
 
-.App-header {
-  background-color: #282c34;
+#sidebar-wrapper {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
 }
 
-.App-link {
-  color: #09d3ac;
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
 }
 
-.form-group {
-  margin-left: 3px;
-  margin-right: 3px;
+#sidebar-wrapper .list-group {
+  width: 15rem;
 }
 
-.form-group.required .username:after { 
-   content:"*";
-   color:red;
+#page-content-wrapper {
+  min-width: 100vw;
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: #1BA261;
-    border-color: #007bff;
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
 }
 
-.card-header:first-child {
-  background-color: #1BA261;
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
 }
 
-.cookiePolicy {
-  display: none;
-}
-
-.disabled  {
-    pointer-events: none;
-    opacity: 0.4;
-    cursor:not-allowed;
-}
-
-.disabled:hover {
-    pointer-events: none;
-    opacity: 0.4;
-    cursor:not-allowed;
-}

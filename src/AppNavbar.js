@@ -6,21 +6,53 @@ class AppNavbar extends React.Component{
     render(){
         return(
             <React.Fragment>
-              <div className="nav-color d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3  border-bottom shadow-sm">
-                <h5 className="my-0 mr-md-auto font-weight-normal"><a href="/">Cert Guru</a></h5>
-                  <nav className="nav-color my-2 my-md-0 mr-md-3">
-                    <a className="p-2" href="/mylist">My Certificates</a>
-                    <a className="p-2" href="/mylist">Documentation</a>
-                    <a className="p-2" href="#">Support</a>
-                  </nav>
-                <a className="btn btn-primary" href="#" onClick={() => {this.props.auth.logout()}}>Logout</a>
-              </div>
-              <div className="fixed-bottom">  
-                <section className='section-main'>
-                  <div className='no-margin'>Copyright @Cert Guru</div>
-                </section>
-              </div>
+  <div class="d-flex" id="wrapper">
 
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Cert Guru </div>
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
+      </div>
+    </div>
+
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+  </div>
             </React.Fragment>
         )  
     }
