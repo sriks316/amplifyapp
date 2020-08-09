@@ -1,0 +1,9 @@
+{
+	"auth": {
+		"reactcertd8850554": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	}
+}
